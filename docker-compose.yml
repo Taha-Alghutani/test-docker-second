@@ -10,8 +10,8 @@ services:
     environment:
       - DEBUG=1
       - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
-      - MONGODB_HOST=mongo
-      - MONGODB_PORT=27017
+      - MONGODB_HOST=postgres
+      - MONGODB_PORT=5432
       - MONGODB_USERNAME=root
       - MONGODB_PASSWORD=example
       - MONGODB_DATABASE=django_db
