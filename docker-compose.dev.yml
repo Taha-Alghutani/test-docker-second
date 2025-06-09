@@ -1,0 +1,12 @@
+
+
+services:
+  web:
+    container_name: myapp-container
+    environment:
+      - DEBUG=1
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+
