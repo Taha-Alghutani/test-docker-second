@@ -6,6 +6,7 @@ WORKDIR /app
 
 # نسخ ملفات المشروع إلى داخل الحاوية
 COPY . /app
+COPY wait_for_postgres.py /app/wait_for_postgres.py
 
 # نسخ ملف المتطلبات وتثبيتها
 COPY requirements.txt .
