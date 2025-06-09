@@ -28,6 +28,7 @@ services:
     volumes:
       - postgresql_data:/var/lib/postgresql/data
     environment:
+      POSTGRES_DB: django_db
       POSTGRES_USER: root
       POSTGRES_PASSWORD: example
       
