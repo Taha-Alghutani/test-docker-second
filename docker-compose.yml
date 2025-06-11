@@ -2,7 +2,7 @@ services:
   web:
     
     build: .
-    image: tahaalghutani/myapp-aws
+    image: tahaalghutani/test-docker-second
     volumes:
       - .:/app   
     environment:
