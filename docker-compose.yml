@@ -2,7 +2,7 @@ services:
   web:
     
     build: .
-    image: tahaalghutani/test-docker-second
+    image: tahaalghutani/test-docker-second:v2
     volumes:
       - .:/app   
     environment:
