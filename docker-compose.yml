@@ -2,7 +2,7 @@ services:
   web:
     
     build: .
-    image: tahaalghutani/myapp
+    image: tahaalghutani/myapp-aws
     volumes:
       - .:/app   
     environment:
