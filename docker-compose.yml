@@ -1,24 +1,19 @@
 services:
   web:
-    container_name: myapp-container
+    
     build: .
-    command: >
-        sh -c "python wait_for_postgres.py && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
-
-    image: tahaalghutani/test-docker:latest
-
+    image: tahaalghutani/myapp
     volumes:
-      - .:/app
-    ports:
-      - "8000:8000"
+      - .:/app   
     environment:
-      - DEBUG=1
-      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
-      - MONGODB_HOST=postgres
-      - MONGODB_PORT=5432
-      - MONGODB_USERNAME=root
-      - MONGODB_PASSWORD=example
-      - MONGODB_DATABASE=django_db
+      - DEBUG=0
+      - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,[::1],13.60.26.157
+      - POSTGRES_DB=django_db
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=example
+      - DB_HOST=postgres
+      - DB_PORT=5432
+
     depends_on: 
       - postgres
       - redis
