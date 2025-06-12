@@ -3,8 +3,7 @@ services:
     
     build: .
     image: tahaalghutani/test-docker-second:v2
-    volumes:
-      - .:/app   
+     
     environment:
       - DEBUG=0
       - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,[::1],13.60.26.157
